@@ -3,6 +3,7 @@
  *   In other words, return the symmetric difference of the two arrays.
  */
 
+// Solution 1
 function diffArray(arr1, arr2) {
   let filteredArr = [];
   // Concatenate the two arrarys in a single one
@@ -23,3 +24,22 @@ function diffArray(arr1, arr2) {
 }
 
 console.log(diffArray([1, "calf", 3, "piglet"], [7, "filly"]));
+
+// Solution 2
+
+/*
+function diffArray(arr1, arr2) {
+ let filteredArr = [];
+ for (let i = 0; i < arr1.length; i++) {
+     if (arr2.indexOf(arr1[i]) === - 1) {
+         filteredArr.push(arr1[i])
+     }
+ }
+ for (let i = 0; i < arr2.length; i++) {
+     if (arr1.indexOf(arr2[i]) === - 1) {
+         filteredArr.push(arr2[i])
+     }
+ }
+ return filteredArr;
+}
+*/
